@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+    <h1> Map Example 1</h1>
+    <hr>
+
+    <p id="demo">
+
+    </p>
+
+    <script>
+    const students = [
+      {firstname : "Mg Mg", lastname: "Kyaw"},
+      {firstname : "Soe", lastname: "Lwin"},
+      {firstname : "Thida", lastname: "Aye"}
+    ];
+    
+    document.getElementById("demo").innerHTML = students.map(getFullName);
+    
+    function getFullName(student) {
+        let rec="<br>";
+        rec+=[student.firstname,student.lastname].join("  ");
+      return rec;
+    }
+    </script>
+
+     -->
+
+
+     <h1> Map Example 2</h1>
+     <hr>
+ 
+     <p id="demo">
+ 
+     </p>
+ 
+     <script>
+     const students = [
+        {firstname : "Mg Mg", lastname: "Kyaw",gender:"Male"},
+        {firstname : "Soe", lastname: "Lwin",gender:"Male"},
+        {firstname : "Thida", lastname: "Aye",gender:"Female"}
+     ];
+     
+     
+     document.getElementById("demo").innerHTML = students.filter(getStudent).map(getFullName);
+     
+     function getStudent(student) {
+       return student.gender=="Male";
+     }
+     function getFullName(student) {
+         let rec="<br>";
+         rec+=[student.firstname,student.lastname].join("  ");
+       return rec;
+     }
+     </script>
+ 
+
+</body>
+</html>

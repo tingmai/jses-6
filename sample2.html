@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+
+    <h1> Filter Example 1</h1>
+    
+    <p id="demo">
+
+    </p>
+
+    <script>
+    const ages = [14,32, 33, 16, 40,29,22,15];
+
+    document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+    function checkAdult(age) {
+    return age >= 18;
+    }
+    </script>
+
+    -->
+
+
+
+    <h1> Filter Example 2 </h1>
+    
+    <p id="demo">
+
+    </p>
+
+    <script>
+     const students=[
+            {id:1,name:"mg mg",address:"Yangon"},
+            {id:2,name:"su su",address:"Mandalay"},
+            {id:3,name:"bo bo",address:"Myitkyina"},
+            {id:3,name:"sai sai",address:"Taunggyi"}
+
+        ];
+
+    const obj= students.filter(getAddress);
+    
+    for(student of obj){
+        console.log(student.address)
+        const list=document.createElement("div");
+        list.innerText=student.address;
+
+        document.getElementById("demo").appendChild(list);
+    }
+
+    
+
+    var city_name="Yangon";
+
+    function getAddress(student) {
+            return student.address!=="Yangon";
+    }
+    </script>
+
+
+</body>
+</html>
